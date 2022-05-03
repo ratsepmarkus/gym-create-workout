@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen-sm mx-auto px-4 py-10">
+  <div class=" bg-gradient-to-b from-gray-800 to-gray-600 bg-gradient-to-r p-20">
     <!-- App Msg -->
     <div
       v-if="statusMsg || errorMsg"
@@ -16,8 +16,8 @@
     <div v-if="dataLoaded">
       <!-- General Workout Info -->
       <div
-        class="flex flex-col items-center p-8 rounded-md shadow-md 
-      bg-gray-800 relative"
+        class="flex flex-col items-center p-8 rounded-md shadow-lg 
+      bg-gray-900 relative"
       >
         <div v-if="user" class="flex absolute left-2 top-2 gap-x-2">
           <div
@@ -64,7 +64,7 @@
             class="p-2 w-full text-gray-500 focus:outline-none"
             v-model="data.workoutName"
           />
-          <h1 v-else class="text-indigo-500 text-2xl text-center">
+          <h1 v-else class="text-indigo-500 text-4xl text-center">
             {{ data.workoutName }}
           </h1>
         </div>
@@ -73,7 +73,7 @@
       <!-- Exercises -->
       <div
         class="mt-10 p-8 rounded-md flex flex-col item-center
-      bg-gray-800 shadow-md"
+      bg-gray-900 shadow-md"
       >
         <!-- Strength Training -->
         <div v-if="data.workoutType === 'strength'" class="flex flex-col gap-y-4 w-full">
@@ -83,7 +83,7 @@
             :key="index"
           >
             <div class="flex flex-2 flex-col md:w-1/3">
-              <label for="exercise-name" class="mb-1 text-sm text-indigo-500">
+              <label for="exercise-name" class="mb-1 text-lg text-indigo-500">
                 Exercise
               </label>
               <input
@@ -96,7 +96,7 @@
               <p v-else class="text-white">{{ item.exercise }}</p>
             </div>
             <div class="flex flex-1 flex-col">
-              <label for="sets" class="mb-1 text-sm text-indigo-500">
+              <label for="sets" class="mb-1 text-lg text-indigo-500">
                 Sets
               </label>
               <input
@@ -109,7 +109,7 @@
               <p v-else class="text-white">{{ item.sets }}</p>
             </div>
             <div class="flex flex-1 flex-col">
-              <label for="reps" class="mb-1 text-sm text-indigo-500">
+              <label for="reps" class="mb-1 text-lg text-indigo-500">
                 Reps
               </label>
               <input
@@ -122,7 +122,7 @@
               <p v-else class="text-white">{{ item.reps }}</p>
             </div>
             <div class="flex flex-1 flex-col">
-              <label for="weight" class="mb-1 text-sm text-indigo-500">
+              <label for="weight" class="mb-1 text-lg text-indigo-500">
                 Weight (Kg)
               </label>
               <input
@@ -162,7 +162,7 @@
             :key="index"
           >
             <div class="flex flex-2 flex-col md:w-1/3">
-              <label for="cardioType" class="mb-1 text-sm text-indigo-500">
+              <label for="cardioType" class="mb-1 text-lg text-indigo-500">
                 Type
               </label>
               <select
@@ -179,7 +179,7 @@
               <p v-else class="text-white">{{ item.cardioType }}</p>
             </div>
             <div class="flex flex-1 flex-col">
-              <label for="distance" class="mb-1 text-sm text-indigo-500">
+              <label for="distance" class="mb-1 text-lg text-indigo-500">
                 Distance
               </label>
               <input
@@ -192,7 +192,7 @@
               <p v-else class="text-white">{{ item.distance }}</p>
             </div>
             <div class="flex flex-1 flex-col">
-              <label for="duration" class="mb-1 text-sm text-indigo-500">
+              <label for="duration" class="mb-1 text-lg text-indigo-500">
                 Duration
               </label>
               <input
@@ -205,7 +205,7 @@
               <p v-else class="text-white">{{ item.duration }}</p>
             </div>
             <div class="flex flex-1 flex-col">
-              <label for="pace" class="mb-1 text-sm text-indigo-500">
+              <label for="pace" class="mb-1 text-lg text-indigo-500">
                 Pace
               </label>
               <input

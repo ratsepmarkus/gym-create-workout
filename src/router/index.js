@@ -6,7 +6,50 @@ import Register from "../views/Register.vue";
 import Create from "../views/Create.vue";
 import ViewWorkout from "../views/ViewWorkout.vue";
 
+import Chest from '../views/chest1.vue'
+import Back from '../views/Back.vue'
+import Shoulders from '../views/Shoulders.vue'
+import Biceps from '../views/Biceps.vue'
+import Triceps from '../views/Triceps.vue'
+import Abdominals from '../views/Abdominals.vue'
+import Legs from '../views/Legs.vue'
 const routes = [
+  {
+    path: '/chest',
+    meta: { title: 'Chest' },
+    component: Chest,
+  },
+
+  {
+    path: '/back',
+    meta: { title: 'Back' },
+    component: Back,
+  },
+  {
+    path: '/shoulders',
+    meta: { title: 'Shoulders' },
+    component: Shoulders,
+  },
+  {
+    path: '/biceps',
+    meta: { title: 'Biceps' },
+    component: Biceps,
+  },
+  {
+    path: '/triceps',
+    meta: { title: 'Triceps' },
+    component: Triceps,
+  },
+  {
+    path: '/abdominals',
+    meta: { title: 'Abdominals' },
+    component: Abdominals,
+  },
+  {
+    path: '/legs',
+    meta: { title: 'Legs' },
+    component: Legs,
+  },
   {
     path: "/",
     name: "Home",
@@ -58,8 +101,6 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
 });
-
-// Change document titles
 
 
 // Route guard for auth routes

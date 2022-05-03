@@ -12,11 +12,13 @@ import { supabase } from "./supabase/init";
 import store from "./store/index";
 import Footer from "./components/Footer.vue";
 import NavigationBar from "./components/NavigationBar.vue";
+import ExerciseGroups from "./components/ExerciseGroups.vue";
 
 export default {
   components: {
     Footer,
     NavigationBar,
+    ExerciseGroups
 },
   setup() {
     // Create data / vars

@@ -1,21 +1,21 @@
 <template>
-  <div class="max-w-screen-md mx-auto px-4 py-10">
+  <div class="bg-gradient-to-b from-gray-800 to-gray-600 bg-gradient-to-r p-20">
     <!-- Status Message -->
     <div
       v-if="statusMsg || errorMsg"
-      class="mb-10 p-4 bg-light-grey rounded-md shadow-lg"
+      class="mb-10 p-4 bg-gray-200 rounded-md shadow-lg"
     >
-      <p class="text-at-light-green">
+      <p class="text-indigo-500 font-bold">
         {{ statusMsg }}
       </p>
       <p class="text-red-500">{{ errorMsg }}</p>
     </div>
 
     <!-- Create -->
-    <div class="p-8 flex items-start bg-gray-800 rounded-md shadow-lg">
+    <div class="p-8 flex items-start bg-gray-900 rounded-md shadow-lg">
       <!-- Form -->
       <form @submit.prevent="createWorkout" class="flex flex-col gap-y-5 w-full">
-        <h1 class="text-2xl font-bold text-indigo-500">Record Workout</h1>
+        <h1 class="text-2xl font-bold text-indigo-500">Create Workout</h1>
 
         <!-- Workout Name -->
         <div class="flex flex-col">
@@ -195,7 +195,7 @@
       text-white bg-indigo-500 duration-200 border-solid
       border-2 border-transparent hover:bg-indigo-600"
         >
-          Record Workout
+          Create Workout
         </button>
       </form>
     </div>
@@ -266,7 +266,7 @@ export default {
           },
         ]);
         if (error) throw error;
-        statusMsg.value = "Succes: Workout Created!";
+        statusMsg.value = "Workout Created! Added to your workouts.";
         workoutName.value = null;
         workoutType.value = "select-workout";
         exercises.value = [];
