@@ -12,14 +12,14 @@
     </div>
 
     <!-- Create -->
-    <div class="p-8 flex items-start bg-light-grey rounded-md shadow-lg">
+    <div class="p-8 flex items-start bg-gray-800 rounded-md shadow-lg">
       <!-- Form -->
       <form @submit.prevent="createWorkout" class="flex flex-col gap-y-5 w-full">
-        <h1 class="text-2xl text-at-light-green">Record Workout</h1>
+        <h1 class="text-2xl font-bold text-indigo-500">Record Workout</h1>
 
         <!-- Workout Name -->
         <div class="flex flex-col">
-          <label for="workout-name" class="mb-1 text-sm text-at-light-green"
+          <label for="workout-name" class="mb-1 text-sm text-white"
             >Workout Name</label
           >
           <input
@@ -33,7 +33,7 @@
 
         <!-- Workout Type -->
         <div class="flex flex-col">
-          <label for="workout-type" class="mb-1 text-sm text-at-light-green"
+          <label for="workout-type" class="mb-1 text-sm text-white"
             >Workout Type</label
           >
           <select
@@ -57,18 +57,23 @@
             :key="index"
           >
             <div class="flex flex-col md:w-1/3">
-              <label for="exercise-name" class="mb-1 text-sm text-at-light-green"
+              <label for="exercise-name" class="mb-1 text-sm text-white"
                 >Exercise
               </label>
-              <input
-                required
-                type="text"
+              <select
+                id="strenght-type"
                 class="p-2 w-full text-gray-500 focus:outline-none"
                 v-model="item.exercise"
-              />
+              >
+                <option value="#">Select Type</option>
+                <option value="barbell squat">Barbell squat</option>
+                <option value="leg press">Leg press</option>
+                <option value="dumbbell curl">Dumbbell curl</option>
+              </select>
+              
             </div>
             <div class="flex flex-col flex-1">
-              <label for="sets" class="mb-1 text-sm text-at-light-green">Sets </label>
+              <label for="sets" class="mb-1 text-sm text-white">Sets </label>
               <input
                 required
                 type="text"
@@ -77,7 +82,7 @@
               />
             </div>
             <div class="flex flex-col flex-1">
-              <label for="reps" class="mb-1 text-sm text-at-light-green">Reps </label>
+              <label for="reps" class="mb-1 text-sm text-white">Reps </label>
               <input
                 required
                 type="text"
@@ -86,7 +91,7 @@
               />
             </div>
             <div class="flex flex-col flex-1">
-              <label for="weight" class="mb-1 text-sm text-at-light-green"
+              <label for="weight" class="mb-1 text-sm text-white"
                 >Weight (Kg)
               </label>
               <input
@@ -107,9 +112,8 @@
             @click="addExercise"
             type="button"
             class="mt-6 py-2 px-6 rounded-sm self-start text-sm
-      text-white bg-at-light-green duration-200 border-solid
-      border-2 border-transparent hover:border-at-light-green hover:bg-white
-      hover:text-at-light-green"
+      text-white bg-indigo-500 duration-200 border-solid
+      border-2 border-transparent hover:bg-indigo-600"
           >
             Add Exercise
           </button>
@@ -123,7 +127,7 @@
             :key="index"
           >
             <div class="flex flex-col md:w-1/3">
-              <label for="cardio-type" class="mb-1 text-sm text-at-light-green"
+              <label for="cardio-type" class="mb-1 text-sm text-white"
                 >Type
               </label>
               <select
@@ -137,7 +141,7 @@
               </select>
             </div>
             <div class="flex flex-col flex-1">
-              <label for="distance" class="mb-1 text-sm text-at-light-green"
+              <label for="distance" class="mb-1 text-sm text-white"
                 >Distance
               </label>
               <input
@@ -148,7 +152,7 @@
               />
             </div>
             <div class="flex flex-col flex-1">
-              <label for="duration" class="mb-1 text-sm text-at-light-green"
+              <label for="duration" class="mb-1 text-sm text-white"
                 >Duration
               </label>
               <input
@@ -159,7 +163,7 @@
               />
             </div>
             <div class="flex flex-col flex-1">
-              <label for="pace" class="mb-1 text-sm text-at-light-green">Pace </label>
+              <label for="pace" class="mb-1 text-sm text-white">Pace </label>
               <input
                 required
                 type="text"
@@ -178,9 +182,8 @@
             @click="addExercise"
             type="button"
             class="mt-6 py-2 px-6 rounded-sm self-start text-sm
-      text-white bg-at-light-green duration-200 border-solid
-      border-2 border-transparent hover:border-at-light-green hover:bg-white
-      hover:text-at-light-green"
+      text-white bg-indigo-500 duration-200 border-solid
+      border-2 border-transparent hover:bg-indigo-600"
           >
             Add Exercise
           </button>
@@ -189,9 +192,8 @@
         <button
           type="submit"
           class="mt-6 py-2 px-6 rounded-sm self-start text-sm
-      text-white bg-at-light-green duration-200 border-solid
-      border-2 border-transparent hover:border-at-light-green hover:bg-white
-      hover:text-at-light-green"
+      text-white bg-indigo-500 duration-200 border-solid
+      border-2 border-transparent hover:bg-indigo-600"
         >
           Record Workout
         </button>

@@ -1,21 +1,22 @@
 <template>
-  <div v-if="appReady" class="min-h-full font-Poppins box-border">
-    <Navigation />
+  <div v-if="appReady" >
+    <NavigationBar />
     <router-view />
     <Footer />
   </div>
 </template>
 
 <script>
-import Navigation from "./components/Navigation.vue";
 import { ref } from "vue";
 import { supabase } from "./supabase/init";
 import store from "./store/index";
 import Footer from "./components/Footer.vue";
+import NavigationBar from "./components/NavigationBar.vue";
+
 export default {
   components: {
-    Navigation,
-    Footer
+    Footer,
+    NavigationBar,
 },
   setup() {
     // Create data / vars
