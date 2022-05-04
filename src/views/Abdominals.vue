@@ -41,7 +41,7 @@ const faq = [
         title: 'hfxgcjhvj',
         items:[
             {
-                heading: 'Crunch',
+                heading: 'Crunch2',
                 open: false,
                  image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Crunch_f3498d5d-82d9-4a7f-8dee-98a2e55a62f2_600x600.png?v=1612138317',
             },
