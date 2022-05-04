@@ -65,10 +65,121 @@
                 class="p-2 w-full text-gray-500 focus:outline-none"
                 v-model="item.exercise"
               >
-                <option value="#">Select Type</option>
-                <option value="barbell squat">Barbell squat</option>
-                <option value="leg press">Leg press</option>
-                <option value="dumbbell curl">Dumbbell curl</option>
+                <option value="">Select Type</option>
+                <option value="Barbell Bench Press">Barbell Bench Press</option>
+                <option value="Incline Dumbbell Bench Press">Incline Dumbbell Bench Press</option>
+                <option value="Peck Deck">Peck Deck</option>
+                <option value="Cable Crossover">Cable Crossover</option>
+                <option value="Incline Barbell Bench Press">Incline Barbell Bench Press</option>
+                <option value="Dumbbell Bench Press">Dumbbell Bench Press</option>
+                <option value="Dumbbell Fly">Dumbbell Fly</option>
+                <option value="Incline Dumbbell Fly">Incline Dumbbell Fly</option>
+                <option value="Chest Press Machine">Chest Press Machine</option>
+                <option value="Dumbbell Declined Bench Press">Dumbbell Declined Bench Press</option>
+                <option value="Push Ups">Push Ups</option>
+                <hr>
+                <option value="Dumbbell Bent Over Row (Single Arm)">Dumbbell Bent Over Row (Single Arm)</option>
+                <option value="Wide Grip Pulldown">Wide Grip Pulldown</option>
+                <option value="Seated Cable Row">Seated Cable Row</option>
+                <option value="Close Grip Pulldown">Close Grip Pulldown</option>
+                <option value="Barbell Row">Barbell Row</option>
+                <option value="Behind Neck Pulldown">Behind Neck Pulldown</option>
+                <option value="Reverse Grip Pulldown">Reverse Grip Pulldown</option>
+                <option value="Rope Pulldown">Rope Pulldown</option>
+                <option value="T-Bar Rows">T-Bar Rows</option>
+                <option value="Barbell Bent Over Rows Supinated Grip">Barbell Bent Over Rows Supinated Grip</option>
+                <option value="Pull Up">Pull Up</option>
+                <option value="Behind the Neck Pull Up">Behind the Neck Pull Up</option>
+                <option value="Pull Up with a Supinated Grip">Pull Up with a Supinated Grip</option>
+                <option value="Straight Arm Lat Pulldown">Straight Arm Lat Pulldown</option>
+                <option value="Dumbbell Bent Over Rows">Dumbbell Bent Over Rows</option>
+                <option value="Dumbbell Pullover">Dumbbell Pullover</option>
+                <option value="Barbell Deadlift">Barbell Deadlift</option>
+                <option value="Barbell Sumo Deadlift">Barbell Sumo Deadlift</option>
+                <option value="Trap Bar Deadlift">Trap Bar Deadlift</option>
+                <option value="Dumbbell Deadlift">Dumbbell Deadlift</option>
+                <option value="Barbell Shrug">Barbell Shrug</option>
+                <option value="Dumbbell Shrugs">Dumbbell Shrugs</option>
+                <hr>
+                <option value="Dumbbell Shoulder Press">Dumbbell Shoulder Press</option>
+                <option value="Dumbbell Lateral Raise">Dumbbell Lateral Raise</option>
+                <option value="Dumbbell Front Raise">Dumbbell Front Raise</option>
+                <option value="High Cable Rear Delt Fly">High Cable Rear Delt Fly</option>
+                <option value="Smith Machine Shoulder Press">Smith Machine Shoulder Press</option>
+                <option value="Barbell Upright Row">Barbell Upright Row</option>
+                <option value="Bent-Over Lateral Raise">Bent-Over Lateral Raise</option>
+                <option value="Cable One-Arm Lateral Raise">Cable One-Arm Lateral Raise</option>
+                <option value="Dumbbell Push Press">Dumbbell Push Press</option>
+                <option value="Barbell Push Press">Barbell Push Press</option>
+                <option value="Single-Arm Cable Front Raise">Single-Arm Cable Front Raise</option>
+                <option value="Barbell Front Raise">Barbell Front Raise</option>
+                <option value="Seated Barbell Shoulder Press">Seated Barbell Shoulder Press</option>
+                <option value="Seated Behind the Neck Barbell Shoulder Press">Seated Behind the Neck Barbell Shoulder Press</option>
+                <option value="Standing Barbell Shoulder Press">Standing Barbell Shoulder Press</option>
+                <option value="Standing Behind the Neck Barbell Shoulder Press">Standing Behind the Neck Barbell Shoulder Press</option>
+                <option value="Alternate Dumbbell Front Raise Neutral Grip">Alternate Dumbbell Front Raise Neutral Grip</option>
+                <option value="One-Arm Low-Pulley Front Raise Neutral Grip">One-Arm Low-Pulley Front Raise Neutral Grip</option>
+                <option value="Two-Handed Dumbbell Front Raise">Two-Handed Dumbbell Front Raise</option>
+                <hr>
+                <option value="Barbell Curl">Barbell Curl</option>
+                <option value="Alternating Dumbbell Curl">Alternating Dumbbell Curl</option>
+                <option value="Rope Cable Curl">Rope Cable Curl</option>
+                <option value="EZ Barbell Curl">EZ Barbell Curl</option>
+                <option value="EZ Barbell Preacher Curl">EZ Barbell Preacher Curl</option>
+                <option value="Hammer Curl">Hammer Curl</option>
+                <option value="Incline Dumbbell Curl">Incline Dumbbell Curl</option>
+                <option value="Dumbbell Concentration Curl">Dumbbell Concentration Curl</option>
+                <option value="Single-Arm Low Pulley Cable Cur">Single-Arm Low Pulley Cable Cur</option>
+                <option value="Straight Bar Low Pulley Cable Curl">Straight Bar Low Pulley Cable Curl</option>
+                <option value="Standing High Pulley Cable Curl">Standing High Pulley Cable Curl</option>
+                <option value="Seated Barbell Wrist Curl">Seated Barbell Wrist Curl</option>
+                <option value="Seated Barbell Wrist Extension">Seated Barbell Wrist Extension</option>
+                <option value="Reverse Barbell Curl">Reverse Barbell Curl</option>
+                <option value="Standing Barbell Shoulder Press">Standing Barbell Shoulder Press</option>
+                <option value="Standing Behind the Neck Barbell Shoulder Press">Standing Behind the Neck Barbell Shoulder Press</option>
+                <option value="Alternate Dumbbell Front Raise Neutral Grip">Alternate Dumbbell Front Raise Neutral Grip</option>
+                <option value="One-Arm Low-Pulley Front Raise Neutral Grip">One-Arm Low-Pulley Front Raise Neutral Grip</option>
+                <option value="Two-Handed Dumbbell Front Raise">Two-Handed Dumbbell Front Raise</option>
+                <hr>
+                <option value="Lying Triceps Extension">Lying Triceps Extension</option>
+                <option value="Triceps Pressdown">Triceps Pressdown</option>
+                <option value="Cable Rope Pushdown">Cable Rope Pushdown</option>
+                <option value="Dumbbell Overhead Triceps Extension">Dumbbell Overhead Triceps Extension</option>
+                <option value="Close Grip Bench Press">Close Grip Bench Press</option>
+                <option value="Kickback">Kickback</option>
+                <option value="Reverse Grip Cable Triceps Extension with Barbell">Reverse Grip Cable Triceps Extension with Barbell</option>
+                <option value="Single-Arm Cable Triceps Extension">Single-Arm Cable Triceps Extension</option>
+                <option value="Single-Arm Cable Triceps Extension with Supinated Gri">Single-Arm Cable Triceps Extension with Supinated Gri</option>
+                <option value="Lying Dumbbell Triceps Extension">Lying Dumbbell Triceps Extension</option>
+                <option value="Seated Barbell French Press">Seated Barbell French Press</option>
+                <option value="Seated Barbell Wrist Curl">Seated Barbell Wrist Curl</option>
+                <option value="Bench Dips">Bench Dips</option>
+                <option value="Parallel Dip Bar">Parallel Dip Bar</option>
+                <hr>
+                <option value="Crunch">Crunch</option>
+                <option value="Oblique Crunch">Oblique Crunch</option>
+                <option value="Crunch Machin">Crunch Machin</option>
+                <option value="Rope Ab Pulldown">Rope Ab Pulldown</option>
+                <option value="Plank">Plank</option>
+                <option value="Hanging Leg Raise">Hanging Leg Raise</option>
+                <option value="Bent Knee Reverse Crunch">Bent Knee Reverse Crunch</option>
+                <option value="Long Arm Crunc">Long Arm Crunc</option>
+                <option value="Plank Get Ups">Plank Get Ups</option>
+                <hr>
+                <option value="Squat">Squat</option>
+                <option value="Leg Press">Leg Press</option>
+                <option value="Leg Extension">Leg Extension</option>
+                <option value="Lunge">Lunge</option>
+                <option value="Lying Leg Curl">Lying Leg Curl</option>
+                <option value="Hack Squat">Hack Squat</option>
+                <option value="Seated Leg Curl">Seated Leg Curl</option>
+                <option value="Single Leg Extension">Single Leg Extension</option>
+                <option value="Dumbbell Stiff-Leg Deadlift">Dumbbell Stiff-Leg Deadlift</option>
+                <option value="Barbell Stiff-Leg Deadlift">Barbell Stiff-Leg Deadlift</option>
+                <option value="Knee Tuck Jumps">Knee Tuck Jumps</option>
+                <option value="Burpees">Burpees</option>
+                <option value="Seated Calf Raise">Seated Calf Raise</option>
+                <option value="Standing Calf Raise">Standing Calf Raise</option>
               </select>
               
             </div>
@@ -135,8 +246,11 @@
                 class="p-2 w-full text-gray-500 focus:outline-none"
                 v-model="item.cardioType"
               >
-                <option value="#">Select Type</option>
+                <option value="">Select Type</option>
                 <option value="run">Runs</option>
+                
+                <option value="walk">Walk</option>
+                <option value="walk">Walk</option>
                 <option value="walk">Walk</option>
               </select>
             </div>
