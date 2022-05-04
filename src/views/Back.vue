@@ -10,13 +10,7 @@
     </div>
     <div class="flex flex-col">
             <div v-for='(kkk, index) in faq' :key='index'  class="grid grid-cols-2 lg:grid-cols-4 lg:px-8">
-                <div v-for='(item, index) in kkk.items' key='index' class="p-2 lg:p-4">
-                   <div class="h-[300px] bg-gray-200 p-6 rounded-lg">
-                    <router-link to=""><img :src="item.image_url" class="h-40 rounded w-full object-cover object-center mb-6" alt="content"></router-link>
-                    <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{item.heading}}</h2>
-                    <p class="leading-relaxed text-base">{{item.desc}}</p>
-                  </div>
-                </div>
+              <Cards v-for='(item, index) in kkk.items' :key='index' :data='item'/>
             </div>
     </div>
   </div>
@@ -24,7 +18,7 @@
 
 </template>
 <script setup>
-
+import Cards from "../components/Cards.vue";
 import {
   TransitionRoot,
   TransitionChild,
