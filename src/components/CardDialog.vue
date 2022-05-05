@@ -45,9 +45,41 @@
               </DialogTitle>
               <div class="mt-2">
                 <img :src="data.image_url" alt="">
-                <p class="text-sm text-gray-500">
-                 asdasd
-                </p>
+                <h1 class="text-2xl font-medium">
+                 Exercise execution guide
+                </h1>
+                <div class="mt-2 mb-2">
+                  <!-- Starting position + Starting position descriptio -->
+                  <div>
+                    <h1 class="text-2xl font-medium">
+                      Starting position
+                    </h1>
+                    <p class="pt-2">
+                      {{data.starting_position_desc}}
+                    </p>
+                  </div>
+                   <!-- Execution + Execution descriptio -->
+                  <div class="mt-2 mb-2">
+                    <h1 class="text-2xl font-medium">
+                      Execution
+                    </h1>
+                    <p class="pt-2">
+                      {{data.execution_desc}}
+                    </p>
+                  </div>
+                  <div class="space-y-2">
+                  <!--  During the whole movement + description -->
+                  <h2>
+                    {{data.During_the_whole_movement}}
+                  </h2>
+                  <p class=" pl-5 space-y-3">
+                    {{data.During_the_whole_movement_desc1}}
+                  </p>
+                  <p class=" pl-5 space-y-3">
+                    {{data.During_the_whole_movement_desc2}}
+                  </p>
+                  </div>
+                </div>
               </div>
 
               <div class="mt-4">

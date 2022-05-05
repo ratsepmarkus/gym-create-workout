@@ -45,6 +45,12 @@ const faq = [
                 heading: 'Barbell Bench Press',
                 open: false,
                 image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Barbell-Bench-Press_0316b783-43b2-44f8-8a2b-b177a2cfcbfc_600x600.png?v=1612137800',
+                starting_position_desc:'Lying on the bench, your feet flat on the floor. Grasp the bar with a grip wider than shoulder width. Your forearms should be perpendicular to the floor.',
+                execution_desc:'Unhook the bar and slowly lower it to the lower part of your chest. As you contract your pectorals, push the load upwards until your arms are almost straight.',
+                During_the_whole_movement:'During the whole movement:',
+                During_the_whole_movement_desc1:'Keep your elbows pointed outward and slightly bent to reduce stress on the joint.',
+                During_the_whole_movement_desc2:'Keep your shoulders flat against the bench.',
+                
 
             },
               {
