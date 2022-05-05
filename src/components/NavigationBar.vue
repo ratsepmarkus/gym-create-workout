@@ -8,7 +8,8 @@
       </svg>
       <router-link to="/" class="ml-3 text-xl tracking-wider">FLIPPIN'GYM</router-link>
     </a>
-    <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+    <div class="hidden md:flex">
+    <nav class=" md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
       <router-link to="/chest" class="mr-5 hover:text-indigo-500">Chest</router-link>
       <router-link to="/back" class="mr-5 hover:text-indigo-500">Back</router-link>
       <router-link to="/shoulders" class="mr-5 hover:text-indigo-500">Shoulders</router-link>
@@ -17,6 +18,45 @@
       <router-link to="/abdominals" class="mr-5 hover:text-indigo-500">Abdominals</router-link>
       <router-link to="/legs" class="mr-5 hover:text-indigo-500">Legs</router-link>
     </nav>
+    </div>
+<div @click="toggleNav" class="flex md:hidden">
+  <button
+    type="button"
+    class="text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400"
+    aria-label="toggle menu"
+  >
+    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+      <path
+        fill-rule="evenodd"
+        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+      ></path>
+    </svg>
+  </button>
+</div>
+
+     <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+        <ul
+          :class="showMenu ? 'flex' : 'hidden'"
+          class="
+            flex-col
+            mt-8
+            space-y-4
+            md:flex
+            md:space-y-0
+            md:flex-row
+            md:items-center
+            md:space-x-10
+            md:mt-0
+          "
+        >
+        <router-link to="/chest" class="md:hidden mr-5 hover:text-indigo-500">Chest</router-link>
+        <router-link to="/back" class="md:hidden mr-5 hover:text-indigo-500">Back</router-link>
+        <router-link to="/shoulders" class="md:hidden mr-5 hover:text-indigo-500">Shoulders</router-link>
+        <router-link to="/biceps" class="md:hidden mr-5 hover:text-indigo-500">Biceps</router-link>
+        <router-link to="/triceps" class="md:hidden mr-5 hover:text-indigo-500">Triceps</router-link>
+        <router-link to="/abdominals" class="md:hidden mr-5 hover:text-indigo-500">Abdominals</router-link>
+        <router-link to="/legs" class="md:hidden mr-5 hover:text-indigo-500">Legs</router-link>
+        </ul>
     <ul class="flex flex-1 justify-end gap-x-10">
         <router-link v-if="user" class="cursor-pointer inline-flex items-center bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-600 rounded text-base mt-4 md:mt-0" :to="{ name: 'Create' }"
           >Create</router-link
@@ -36,6 +76,16 @@ import { computed } from "vue";
 import { supabase } from "../supabase/init";
 import { useRouter } from "vue-router";
 export default {
+    data() {
+      return {
+        showMenu: false,
+      };
+    },
+    methods: {
+      toggleNav: function () {
+        this.showMenu = !this.showMenu;
+      },
+    },
   setup() {
     // Get user from store
     const user = computed(() => store.state.user);
