@@ -37,25 +37,14 @@
      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
         <ul
           :class="showMenu ? 'flex' : 'hidden'"
-          class="
-            flex-col
-            mt-8
-            space-y-4
-            md:flex
-            md:space-y-0
-            md:flex-row
-            md:items-center
-            md:space-x-10
-            md:mt-0
-          "
-        >
-        <router-link to="/chest" class="md:hidden mr-5 hover:text-indigo-500">Chest</router-link>
-        <router-link to="/back" class="md:hidden mr-5 hover:text-indigo-500">Back</router-link>
-        <router-link to="/shoulders" class="md:hidden mr-5 hover:text-indigo-500">Shoulders</router-link>
-        <router-link to="/biceps" class="md:hidden mr-5 hover:text-indigo-500">Biceps</router-link>
-        <router-link to="/triceps" class="md:hidden mr-5 hover:text-indigo-500">Triceps</router-link>
-        <router-link to="/abdominals" class="md:hidden mr-5 hover:text-indigo-500">Abdominals</router-link>
-        <router-link to="/legs" class="md:hidden mr-5 hover:text-indigo-500">Legs</router-link>
+          class="items-center flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
+        <router-link to="/chest" class="md:hidden  hover:text-indigo-500">Chest</router-link>
+        <router-link to="/back" class="md:hidden  hover:text-indigo-500">Back</router-link>
+        <router-link to="/shoulders" class="md:hidden  hover:text-indigo-500">Shoulders</router-link>
+        <router-link to="/biceps" class="md:hidden  hover:text-indigo-500">Biceps</router-link>
+        <router-link to="/triceps" class="md:hidden  hover:text-indigo-500">Triceps</router-link>
+        <router-link to="/abdominals" class="md:hidden  hover:text-indigo-500">Abdominals</router-link>
+        <router-link to="/legs" class="md:hidden  hover:text-indigo-500">Legs</router-link>
         </ul>
     <ul class="flex flex-1 justify-end gap-x-10">
         <router-link v-if="user" class="cursor-pointer inline-flex items-center bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-600 rounded text-base mt-4 md:mt-0" :to="{ name: 'Create' }"
