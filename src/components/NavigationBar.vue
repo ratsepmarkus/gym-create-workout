@@ -19,20 +19,32 @@
       <router-link to="/legs" class="mr-5 hover:text-indigo-500">Legs</router-link>
     </nav>
     </div>
-<div @click="toggleNav" class="flex md:hidden">
-  <button
-    type="button"
-    class="text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400"
-    aria-label="toggle menu"
-  >
-    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-      <path
-        fill-rule="evenodd"
-        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-      ></path>
-    </svg>
-  </button>
-</div>
+    <div class="flex flex-row-reverse gap-x-10">
+      <div @click="toggleNav" class="flex md:hidden">
+        <button
+          type="button"
+          class="text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400"
+          aria-label="toggle menu"
+        >
+          <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+            <path
+              fill-rule="evenodd"
+              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="flex gap-x-4 justify-center">
+            <router-link v-if="user" class="cursor-pointer inline-flex items-center bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-600 rounded text-base " :to="{ name: 'Create' }"
+              >Create</router-link
+            >
+            <router-link v-if="!user" class="cursor-pointer inline-flex items-center bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-600 rounded text-base " :to="{ name: 'Login' }"
+              >Login</router-link
+            >
+            <li v-if="user" @click="logout" class="cursor-pointer py-1 text-red-500">Logout</li>
+      </ul>
+    </div>
 
      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
         <ul
@@ -46,15 +58,7 @@
         <router-link to="/abdominals" class="md:hidden  hover:text-indigo-500">Abdominals</router-link>
         <router-link to="/legs" class="md:hidden  hover:text-indigo-500">Legs</router-link>
         </ul>
-    <ul class="flex flex-1 justify-end gap-x-10">
-        <router-link v-if="user" class="cursor-pointer inline-flex items-center bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-600 rounded text-base mt-4 md:mt-0" :to="{ name: 'Create' }"
-          >Create</router-link
-        >
-        <router-link v-if="!user" class="cursor-pointer inline-flex items-center bg-indigo-500 border-0 py-1 px-3 focus:outline-none hover:bg-indigo-600 rounded text-base mt-4 md:mt-0" :to="{ name: 'Login' }"
-          >Login</router-link
-        >
-        <li v-if="user" @click="logout" class="cursor-pointer">Logout</li>
-      </ul>
+        
   </div>
 </header>
 </template>
