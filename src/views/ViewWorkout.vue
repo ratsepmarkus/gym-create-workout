@@ -51,7 +51,7 @@
         />
 
         <span
-          class="mt-6 py-1.5 px-5 text-xs text-white bg-indigo-500
+          class="mt-6 py-1.5 px-5 text-xs text-white bg-gray-700
         rounded-lg shadow-md"
         >
           {{ data.workoutType }}

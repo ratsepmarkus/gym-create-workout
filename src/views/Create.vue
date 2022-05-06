@@ -57,7 +57,7 @@
             :key="index"
           >
             <div class="flex flex-col md:w-1/3">
-              <label for="exercise-name" class="mb-1 text-sm text-white"
+              <label for="exercise-name" class="mb-1 text-sm text-indigo-500"
                 >Exercise
               </label>
               <select
@@ -184,7 +184,7 @@
               
             </div>
             <div class="flex flex-col flex-1">
-              <label for="sets" class="mb-1 text-sm text-white">Sets </label>
+              <label for="sets" class="mb-1 text-sm text-indigo-500">Sets </label>
               <input
                 required
                 type="text"
@@ -193,7 +193,7 @@
               />
             </div>
             <div class="flex flex-col flex-1">
-              <label for="reps" class="mb-1 text-sm text-white">Reps </label>
+              <label for="reps" class="mb-1 text-sm text-indigo-500">Reps </label>
               <input
                 required
                 type="text"
@@ -202,7 +202,7 @@
               />
             </div>
             <div class="flex flex-col flex-1">
-              <label for="weight" class="mb-1 text-sm text-white"
+              <label for="weight" class="mb-1 text-sm text-indigo-500"
                 >Weight (Kg)
               </label>
               <input
@@ -238,7 +238,7 @@
             :key="index"
           >
             <div class="flex flex-col md:w-1/3">
-              <label for="cardio-type" class="mb-1 text-sm text-white"
+              <label for="cardio-type" class="mb-1 text-sm text-indigo-500"
                 >Type
               </label>
               <select
@@ -255,7 +255,7 @@
               </select>
             </div>
             <div class="flex flex-col flex-1">
-              <label for="distance" class="mb-1 text-sm text-white"
+              <label for="distance" class="mb-1 text-sm text-indigo-500"
                 >Distance
               </label>
               <input
@@ -266,7 +266,7 @@
               />
             </div>
             <div class="flex flex-col flex-1">
-              <label for="duration" class="mb-1 text-sm text-white"
+              <label for="duration" class="mb-1 text-sm text-indigo-500"
                 >Duration
               </label>
               <input
@@ -277,7 +277,7 @@
               />
             </div>
             <div class="flex flex-col flex-1">
-              <label for="pace" class="mb-1 text-sm text-white">Pace </label>
+              <label for="pace" class="mb-1 text-sm text-indigo-500">Pace </label>
               <input
                 required
                 type="text"
