@@ -157,7 +157,7 @@
         <!-- Cardio -->
         <div v-else class="flex flex-col gap-y-4 w-full">
           <div
-            class="flex flex-col gap-x-6 gap-y-2 relative sm:flex-row"
+            class="flex  gap-x-6 gap-y-2 relative sm:flex-row"
             v-for="(item, index) in data.exercises"
             :key="index"
           >

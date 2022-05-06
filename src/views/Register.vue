@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen-sm mx-auto px-4 py-10">
+  <div class="bg-gradient-to-b from-gray-800 to-gray-600 bg-gradient-to-r md:px-60 md:py-20 px-4 py-10">
     <!-- Error Handling -->
     <div v-if="errorMsg" class="mb-10 p-4 rounded-md bg-light-grey shadow-lg">
       <p class="text-red-500">{{ errorMsg }}</p>
