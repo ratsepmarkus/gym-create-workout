@@ -10,7 +10,7 @@
     </div>
     <div class="flex flex-col">
             <div v-for='(kkk, index) in faq' :key='index'  class="grid grid-cols-2 lg:grid-cols-4 lg:px-8">
-              <Cards v-for='(item, index) in kkk.items' :key='index' :data='item'/>
+              <CardDialog v-for='(item, index) in kkk.items' :key='index' :data='item'/>
             </div>
     </div>
   </div>
@@ -18,6 +18,7 @@
 
 </template>
 <script setup>
+import CardDialog from '../components/CardDialog.vue';
 import Cards from '../components/Cards.vue';
 import {
   TransitionRoot,
@@ -43,57 +44,112 @@ const faq = [
             {
                 heading: 'Barbell Bench Press',
                 open: false,
-                 image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Barbell-Bench-Press_0316b783-43b2-44f8-8a2b-b177a2cfcbfc_600x600.png?v=1612137800',
+                image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Barbell-Bench-Press_0316b783-43b2-44f8-8a2b-b177a2cfcbfc_600x600.png?v=1612137800',
+                starting_position_desc:'Lying on the bench, your feet flat on the floor. Grasp the bar with a grip wider than shoulder width. Your forearms should be perpendicular to the floor.',
+                execution_desc:'Unhook the bar and slowly lower it to the lower part of your chest. As you contract your pectorals, push the load upwards until your arms are almost straight.',
+                During_the_whole_movement:'During the whole movement:',
+                During_the_whole_movement_desc1:'Keep your elbows pointed outward and slightly bent to reduce stress on the joint.',
+                During_the_whole_movement_desc2:'Keep your shoulders flat against the bench.',
             },
               {
                 heading: 'Incline Dumbbell Bench Press',
                 open: false,
-                 image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Incline-Dumbbell-Bench-Press_c2bf89a2-433f-4a8f-9801-67c679980867_600x600.png?v=1612138008',
+                image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Incline-Dumbbell-Bench-Press_c2bf89a2-433f-4a8f-9801-67c679980867_600x600.png?v=1612138008',
+                starting_position_desc:'',
+                execution_desc:'',
+                During_the_whole_movement:'',
+                During_the_whole_movement_desc1:'',
+                During_the_whole_movement_desc2:'',
             },
             {
                 heading: 'Peck Deck',
                 open: false,
-                 image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Peck-Deck_600x600.png?v=1612137910',
+                image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Peck-Deck_600x600.png?v=1612137910',
+                starting_position_desc:'',
+                execution_desc:'',
+                During_the_whole_movement:'',
+                During_the_whole_movement_desc1:'',
+                During_the_whole_movement_desc2:'',
             },
             {
                 heading: 'Cable Crossover',
                 open: false,
                 image_url: 'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Cable-Crossover_09c90616-2777-47ed-927e-d5987edfce09_600x600.png?v=1612138036',
+                starting_position_desc:'',
+                execution_desc:'',
+                During_the_whole_movement:'',
+                During_the_whole_movement_desc1:'',
+                During_the_whole_movement_desc2:'',
             },
             {
                 heading: 'Incline Barbell Bench Press',
                 open: false,
-                 image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Incline-Barbell-Bench-Press_dc0c6279-d038-44f5-a682-54c2a5e2602c_600x600.png?v=1612137944',
+                image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Incline-Barbell-Bench-Press_dc0c6279-d038-44f5-a682-54c2a5e2602c_600x600.png?v=1612137944',
+                starting_position_desc:'',
+                execution_desc:'',
+                During_the_whole_movement:'',
+                During_the_whole_movement_desc1:'',
+                During_the_whole_movement_desc2:'',
             },
             {
                 heading: 'Dumbbell Bench Press',
                 open: false,
-                 image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Dumbbell-Bench-Press_13090f67-ccfc-4f3a-9bab-e75d753fa9fa_600x600.png?v=1612137970',
+                image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Dumbbell-Bench-Press_13090f67-ccfc-4f3a-9bab-e75d753fa9fa_600x600.png?v=1612137970',
+                starting_position_desc:'',
+                execution_desc:'',
+                During_the_whole_movement:'',
+                During_the_whole_movement_desc1:'',
+                During_the_whole_movement_desc2:'',
             },
             {
                 heading: 'Dumbbell Fly',
                 open: false,
-                 image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Dumbbell-Fly_119e2918-4241-4f55-bd77-c98a0c76c6c8_600x600.png?v=1612137840',
+                image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Dumbbell-Fly_119e2918-4241-4f55-bd77-c98a0c76c6c8_600x600.png?v=1612137840',
+                starting_position_desc:'',
+                execution_desc:'',
+                During_the_whole_movement:'',
+                During_the_whole_movement_desc1:'',
+                During_the_whole_movement_desc2:'',
             },
             {
                 heading: 'Incline Dumbbell Fly',
                 open: false,
-                 image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Incline-Dumbbell-Fly_44d253c3-da60-45b2-b0ba-88a3bb79da09_600x600.png?v=1612137870',
+                image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Incline-Dumbbell-Fly_44d253c3-da60-45b2-b0ba-88a3bb79da09_600x600.png?v=1612137870',
+                starting_position_desc:'',
+                execution_desc:'',
+                During_the_whole_movement:'',
+                During_the_whole_movement_desc1:'',
+                During_the_whole_movement_desc2:'',
             },
             {
                 heading: 'Chest Press Machine',
                 open: false,
-                 image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Chest-Press-Machine_ab8cd29d-5698-4110-a938-098bda19b5fc_600x600.png?v=1621163108',
+                image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Chest-Press-Machine_ab8cd29d-5698-4110-a938-098bda19b5fc_600x600.png?v=1621163108',
+                starting_position_desc:'',
+                execution_desc:'',
+                During_the_whole_movement:'',
+                During_the_whole_movement_desc1:'',
+                During_the_whole_movement_desc2:'',
             },
             {
                 heading: 'Dumbbell Declined Bench Press',
                 open: false,
-                 image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Dumbbell-Declined-Bench-Press_600x600.png?v=1619977242',
+                image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Dumbbell-Declined-Bench-Press_600x600.png?v=1619977242',
+                starting_position_desc:'',
+                execution_desc:'',
+                During_the_whole_movement:'',
+                During_the_whole_movement_desc1:'',
+                During_the_whole_movement_desc2:'',
             },
             {
                 heading: 'Push Ups',
                 open: false,
-                 image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Push-Ups_600x600.png?v=1640121436',
+                image_url:'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Push-Ups_600x600.png?v=1640121436',
+                starting_position_desc:'',
+                execution_desc:'',
+                During_the_whole_movement:'',
+                During_the_whole_movement_desc1:'',
+                During_the_whole_movement_desc2:'',
             },
         ]
     },

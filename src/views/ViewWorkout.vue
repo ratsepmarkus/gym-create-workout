@@ -1,5 +1,5 @@
 <template>
-  <div class=" bg-gradient-to-b from-gray-800 to-gray-600 bg-gradient-to-r p-20">
+  <div class=" bg-gradient-to-b from-gray-800 to-gray-600 bg-gradient-to-r p-4">
     <!-- App Msg -->
     <div
       v-if="statusMsg || errorMsg"
@@ -78,7 +78,7 @@
         <!-- Strength Training -->
         <div v-if="data.workoutType === 'strength'" class="flex flex-col gap-y-4 w-full">
           <div
-            class="flex flex-col gap-x-6 gap-y-2 relative sm:flex-row"
+            class="flex gap-x-6 gap-y-2 relative sm:flex-row"
             v-for="(item, index) in data.exercises"
             :key="index"
           >
@@ -123,7 +123,7 @@
             </div>
             <div class="flex flex-1 flex-col">
               <label for="weight" class="mb-1 text-lg text-indigo-500">
-                Weight (Kg)
+                Weight
               </label>
               <input
                 v-if="edit"
@@ -157,7 +157,7 @@
         <!-- Cardio -->
         <div v-else class="flex flex-col gap-y-4 w-full">
           <div
-            class="flex flex-col gap-x-6 gap-y-2 relative sm:flex-row"
+            class="flex  gap-x-6 gap-y-2 relative sm:flex-row"
             v-for="(item, index) in data.exercises"
             :key="index"
           >
