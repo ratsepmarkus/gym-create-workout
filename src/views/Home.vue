@@ -1,5 +1,5 @@
 <template>
-  <div v-if="dataLoaded" class="bg-gradient-to-b from-gray-800 to-gray-600 bg-gradient-to-r p-20">
+  <div v-if="dataLoaded" class="bg-gradient-to-b from-gray-800 to-gray-600 bg-gradient-to-r md:px-20 md:py-20 px-4 py-10">
     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Your workouts:</h1>
         <div class="h-1 w-20 bg-indigo-500 rounded mb-6"></div>
     <!-- No Data -->

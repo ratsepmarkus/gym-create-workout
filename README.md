@@ -1,5 +1,3 @@
-# workout_tracker
-
 ## Project setup
 ```
 npm install

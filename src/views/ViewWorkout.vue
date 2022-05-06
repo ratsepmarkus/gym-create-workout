@@ -138,7 +138,7 @@
               v-if="edit"
               @click="deleteExercise(item.id)"
               class="absolute h-4 w-auto -left-5 cursor-pointer"
-              src="@/assets/images/trash-light-green.png"
+              src="@/assets/images/trash-light.png"
               alt=""
             />
           </div>
@@ -221,7 +221,7 @@
               @click="deleteExercise(item.id)"
               v-if="edit"
               class="absolute h-4 w-auto -left-5 cursor-pointer"
-              src=""
+              src="../assets/images/trash-light.png"
               alt=""
             />
           </div>
