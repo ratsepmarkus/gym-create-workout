@@ -58,7 +58,7 @@
         <router-link to="/abdominals" class="md:hidden  hover:text-indigo-500">Abdominals</router-link>
         <router-link to="/legs" class="md:hidden  hover:text-indigo-500">Legs</router-link>
         </ul>
-        
+
   </div>
 </header>
 </template>
@@ -69,6 +69,11 @@ import { computed } from "vue";
 import { supabase } from "../supabase/init";
 import { useRouter } from "vue-router";
 export default {
+    watch: {
+    '$route' (){
+        this.showMenu = false;
+    }
+    },
     data() {
       return {
         showMenu: false,
