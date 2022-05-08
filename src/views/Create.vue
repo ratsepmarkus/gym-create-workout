@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-b from-gray-800 to-gray-600 bg-gradient-to-r p-20">
+  <div class="bg-gradient-to-b from-gray-800 to-gray-600 bg-gradient-to-r md:px-60 md:py-20 px-4 py-10">
     <!-- Status Message -->
     <div
       v-if="statusMsg || errorMsg"
