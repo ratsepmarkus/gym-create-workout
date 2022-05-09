@@ -230,7 +230,7 @@
         <!-- Cardio Inputs -->
         <div v-if="workoutType === 'cardio'" class="flex flex-col gap-y-4">
           <div
-            class="flex flex-col gap-x-6 gap-y-2 relative md:flex-row"
+            class="flex gap-x-4 gap-y-2 relative md:flex-row"
             v-for="(item, index) in exercises"
             :key="index"
           >

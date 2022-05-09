@@ -13,52 +13,44 @@
         <div class="bg-gray-200 p-6 rounded-lg">
           <router-link to="/chest"><img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.shopify.com/s/files/1/0269/5551/3900/files/chest.svg?v=1631823341" alt="content"></router-link>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Chest Exercise</h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
         </div>
       </div>
       <div class="xl:w-1/4 md:w-1/2 p-4">
         <div class="bg-gray-200 p-6 rounded-lg">
           <router-link to="/back"><img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.shopify.com/s/files/1/0269/5551/3900/files/back.svg?v=1631823341" alt="content"></router-link>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Back Exercise</h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
         </div>
       </div>
       <div class="xl:w-1/4 md:w-1/2 p-4">
         <div class="bg-gray-200 p-6 rounded-lg">
           <router-link to="/shoulders"><img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.shopify.com/s/files/1/0269/5551/3900/files/shoulders.svg?v=1631823341" alt="content"></router-link>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Shoulders Exercise</h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
         </div>
       </div>
       <div class="xl:w-1/4 md:w-1/2 p-4">
         <div class="bg-gray-200 p-6 rounded-lg">
           <router-link to="/biceps"><img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.shopify.com/s/files/1/0269/5551/3900/files/biceps.svg?v=1631823341" alt="content"></router-link>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Biceps Exercise</h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
         </div>
       </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
         <div class="bg-gray-200 p-6 rounded-lg">
           <router-link to="/triceps"><img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.shopify.com/s/files/1/0269/5551/3900/files/triceps.svg?v=1631823341" alt="content"></router-link>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Triceps Exercise Guides</h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
         </div>
       </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
         <div class="bg-gray-200 p-6 rounded-lg">
           <router-link to="/abdominals"><img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.shopify.com/s/files/1/0269/5551/3900/files/abdominals.svg?v=1631823341" alt="content"></router-link>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Abdominals Exercise</h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
         </div>
       </div>
             <div class="xl:w-1/4 md:w-1/2 p-4">
         <div class="bg-gray-200 p-6 rounded-lg">
           <router-link to="/legs"><img class="h-40 rounded w-full object-cover object-center mb-6" src="https://cdn.shopify.com/s/files/1/0269/5551/3900/files/legs.svg?v=1631823341" alt="content"></router-link>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Legs Exercise </h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
         </div>
       </div>
-      
     </div>
   </div>
 </section>
