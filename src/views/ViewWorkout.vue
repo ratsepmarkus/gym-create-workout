@@ -251,6 +251,7 @@
       </button>
     </div>
   </div>
+  <Faq />
 </template>
 
 <script>

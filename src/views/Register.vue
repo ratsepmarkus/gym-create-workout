@@ -61,48 +61,51 @@
       </router-link>
     </form>
   </div>
+  <Faq />
 </template>
 
 <script>
 import { ref } from "vue";
 import { supabase } from "../supabase/init";
 import { useRouter } from "vue-router";
+import Faq from "../components/Faq.vue";
 
 export default {
-  name: "register",
-  setup() {
-    // Create data / vars
-    const router = useRouter();
-    const email = ref(null);
-    const password = ref(null);
-    const confirmPassword = ref(null);
-    const errorMsg = ref(null);
-
-    // Register function
-    const register = async () => {
-      if (password.value === confirmPassword.value) {
-        try {
-          const { error } = await supabase.auth.signUp({
-            email: email.value,
-            password: password.value,
-          });
-          if (error) throw error;
-          router.push({ name: "Login" });
-        } catch (error) {
-          errorMsg.value = error.message;
-          setTimeout(() => {
-            errorMsg.value = null;
-          }, 5000);
-        }
-        return;
-      }
-      errorMsg.value = "Error: Passwords do not match";
-      setTimeout(() => {
-        errorMsg.value = null;
-      }, 5000);
-    };
-
-    return { email, password, confirmPassword, errorMsg, register };
-  },
+    name: "register",
+    setup() {
+        // Create data / vars
+        const router = useRouter();
+        const email = ref(null);
+        const password = ref(null);
+        const confirmPassword = ref(null);
+        const errorMsg = ref(null);
+        // Register function
+        const register = async () => {
+            if (password.value === confirmPassword.value) {
+                try {
+                    const { error } = await supabase.auth.signUp({
+                        email: email.value,
+                        password: password.value,
+                    });
+                    if (error)
+                        throw error;
+                    router.push({ name: "Login" });
+                }
+                catch (error) {
+                    errorMsg.value = error.message;
+                    setTimeout(() => {
+                        errorMsg.value = null;
+                    }, 5000);
+                }
+                return;
+            }
+            errorMsg.value = "Error: Passwords do not match";
+            setTimeout(() => {
+                errorMsg.value = null;
+            }, 5000);
+        };
+        return { email, password, confirmPassword, errorMsg, register };
+    },
+    components: { Faq }
 };
 </script>

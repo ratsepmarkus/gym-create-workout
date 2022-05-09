@@ -48,6 +48,7 @@
       </router-link>
     </form>
   </div>
+  <Faq />
   
 </template>
 
@@ -55,34 +56,36 @@
 import { ref } from "vue";
 import { supabase } from "../supabase/init";
 import { useRouter } from "vue-router";
+import Faq from "../components/Faq.vue";
 
 export default {
-  name: "login",
-  setup() {
-    // Create data / vars
-    const router = useRouter();
-    const email = ref(null);
-    const password = ref(null);
-    const errorMsg = ref(null);
-
-    // Login function
-    const login = async () => {
-      try {
-        const { error } = await supabase.auth.signIn({
-          email: email.value,
-          password: password.value,
-        });
-        if (error) throw error;
-        router.push({ name: "Home" });
-      } catch (error) {
-        errorMsg.value = `Error: ${error.message}`;
-        setTimeout(() => {
-          errorMsg.value = null;
-        }, 5000);
-      }
-    };
-
-    return { email, password, errorMsg, login };
-  },
+    name: "login",
+    setup() {
+        // Create data / vars
+        const router = useRouter();
+        const email = ref(null);
+        const password = ref(null);
+        const errorMsg = ref(null);
+        // Login function
+        const login = async () => {
+            try {
+                const { error } = await supabase.auth.signIn({
+                    email: email.value,
+                    password: password.value,
+                });
+                if (error)
+                    throw error;
+                router.push({ name: "Home" });
+            }
+            catch (error) {
+                errorMsg.value = `Error: ${error.message}`;
+                setTimeout(() => {
+                    errorMsg.value = null;
+                }, 5000);
+            }
+        };
+        return { email, password, errorMsg, login };
+    },
+    components: { Faq }
 };
 </script>

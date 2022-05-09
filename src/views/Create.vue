@@ -52,7 +52,7 @@
         <!-- Strength Training Inputs -->
         <div v-if="workoutType === 'strength'" class="flex flex-col gap-y-4">
           <div
-            class="flex flex-col gap-x-6 gap-y-2 relative md:flex-row"
+            class="flex gap-x-4 gap-y-2 relative"
             v-for="(item, index) in exercises"
             :key="index"
           >
@@ -203,7 +203,7 @@
             </div>
             <div class="flex flex-col flex-1">
               <label for="weight" class="mb-1 text-sm text-indigo-500"
-                >Weight (Kg)
+                >Weight
               </label>
               <input
                 required
@@ -314,98 +314,98 @@
       </form>
     </div>
   </div>
+  <Faq />
 </template>
 
 <script>
 import { ref } from "vue";
 import { uid } from "uid";
 import { supabase } from "../supabase/init";
+import Faq from "../components/Faq.vue";
 export default {
-  name: "create",
-  setup() {
-    // Create data
-    const workoutName = ref("");
-    const workoutType = ref("select-workout");
-    const exercises = ref([]);
-    const statusMsg = ref(null);
-    const errorMsg = ref(null);
-
-    // Add exercise
-    const addExercise = () => {
-      if (workoutType.value === "strength") {
-        exercises.value.push({
-          id: uid(),
-          exercise: "",
-          sets: "",
-          reps: "",
-          weight: "",
-        });
-        return;
-      }
-      exercises.value.push({
-        id: uid(),
-        cardioType: "",
-        distance: "",
-        duration: "",
-        pace: "",
-      });
-    };
-
-    // Delete exercise
-    const deleteExercise = (id) => {
-      if (exercises.value.length > 1) {
-        exercises.value = exercises.value.filter((exercise) => exercise.id !== id);
-        return;
-      }
-      errorMsg.value = "Error: Cannot remove, need to at least have one exercise";
-      setTimeout(() => {
-        errorMsg.value = false;
-      }, 5000);
-    };
-
-    // Listens for chaging of workout type input
-    const workoutChange = () => {
-      exercises.value = [];
-      addExercise();
-    };
-
-    // Create workout
-    const createWorkout = async () => {
-      try {
-        const { error } = await supabase.from("workouts").insert([
-          {
-            workoutName: workoutName.value,
-            workoutType: workoutType.value,
-            exercises: exercises.value,
-          },
-        ]);
-        if (error) throw error;
-        statusMsg.value = "Workout Created! Added to your workouts.";
-        workoutName.value = null;
-        workoutType.value = "select-workout";
-        exercises.value = [];
-        setTimeout(() => {
-          statusMsg.value = false;
-        }, 5000);
-      } catch (error) {
-        errorMsg.value = `Error: ${error.message}`;
-        setTimeout(() => {
-          errorMsg.value = false;
-        }, 5000);
-      }
-    };
-
-    return {
-      workoutName,
-      workoutType,
-      exercises,
-      statusMsg,
-      errorMsg,
-      addExercise,
-      workoutChange,
-      deleteExercise,
-      createWorkout,
-    };
-  },
+    name: "create",
+    setup() {
+        // Create data
+        const workoutName = ref("");
+        const workoutType = ref("select-workout");
+        const exercises = ref([]);
+        const statusMsg = ref(null);
+        const errorMsg = ref(null);
+        // Add exercise
+        const addExercise = () => {
+            if (workoutType.value === "strength") {
+                exercises.value.push({
+                    id: uid(),
+                    exercise: "",
+                    sets: "",
+                    reps: "",
+                    weight: "",
+                });
+                return;
+            }
+            exercises.value.push({
+                id: uid(),
+                cardioType: "",
+                distance: "",
+                duration: "",
+                pace: "",
+            });
+        };
+        // Delete exercise
+        const deleteExercise = (id) => {
+            if (exercises.value.length > 1) {
+                exercises.value = exercises.value.filter((exercise) => exercise.id !== id);
+                return;
+            }
+            errorMsg.value = "Error: Cannot remove, need to at least have one exercise";
+            setTimeout(() => {
+                errorMsg.value = false;
+            }, 5000);
+        };
+        // Listens for chaging of workout type input
+        const workoutChange = () => {
+            exercises.value = [];
+            addExercise();
+        };
+        // Create workout
+        const createWorkout = async () => {
+            try {
+                const { error } = await supabase.from("workouts").insert([
+                    {
+                        workoutName: workoutName.value,
+                        workoutType: workoutType.value,
+                        exercises: exercises.value,
+                    },
+                ]);
+                if (error)
+                    throw error;
+                statusMsg.value = "Workout Created! Added to your workouts.";
+                workoutName.value = null;
+                workoutType.value = "select-workout";
+                exercises.value = [];
+                setTimeout(() => {
+                    statusMsg.value = false;
+                }, 5000);
+            }
+            catch (error) {
+                errorMsg.value = `Error: ${error.message}`;
+                setTimeout(() => {
+                    errorMsg.value = false;
+                }, 5000);
+            }
+        };
+        return {
+            workoutName,
+            workoutType,
+            exercises,
+            statusMsg,
+            errorMsg,
+            addExercise,
+            workoutChange,
+            deleteExercise,
+            createWorkout,
+        };
+    },
+    components: { Faq }
 };
 </script>
