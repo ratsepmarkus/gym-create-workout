@@ -1,7 +1,7 @@
 <template>
 <div class="bg-lightblue py-20 px-4">
     <div class="mx-auto max-w-6xl flex flex-col md:flex-row">
-        <h2 class="mr-8 w-full md:w-1/3 text-3xl font-extrabold leading-9">
+        <h2 class="mr-8 mb-4 w-full md:w-1/3 text-3xl font-extrabold leading-9">
             Frequently-asked questions
         </h2>
         <dl class="w-full md:w-2/3">
