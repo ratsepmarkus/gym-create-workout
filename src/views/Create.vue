@@ -186,7 +186,6 @@
             <div class="flex flex-col flex-1">
               <label for="sets" class="mb-1 text-sm text-indigo-500">Sets </label>
               <input
-                required
                 type="text"
                 class="p-2 w-full text-gray-500 focus:outline-none"
                 v-model="item.sets"
@@ -195,7 +194,6 @@
             <div class="flex flex-col flex-1">
               <label for="reps" class="mb-1 text-sm text-indigo-500">Reps </label>
               <input
-                required
                 type="text"
                 class="p-2 w-full text-gray-500 focus:outline-none"
                 v-model="item.reps"
@@ -206,7 +204,6 @@
                 >Weight
               </label>
               <input
-                required
                 type="text"
                 class="p-2 w-full text-gray-500 focus:outline-none"
                 v-model="item.weight"
@@ -259,7 +256,6 @@
                 >Distance
               </label>
               <input
-                required
                 type="text"
                 class="p-2 w-full text-gray-500 focus:outline-none"
                 v-model="item.distance"
@@ -270,7 +266,6 @@
                 >Duration
               </label>
               <input
-                required
                 type="text"
                 class="p-2 w-full text-gray-500 focus:outline-none"
                 v-model="item.duration"
@@ -279,7 +274,6 @@
             <div class="flex flex-col flex-1">
               <label for="pace" class="mb-1 text-sm text-indigo-500">Pace </label>
               <input
-                required
                 type="text"
                 class="p-2 w-full text-gray-500 focus:outline-none"
                 v-model="item.pace"
