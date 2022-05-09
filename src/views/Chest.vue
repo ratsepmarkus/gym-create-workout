@@ -8,8 +8,8 @@
       </div>
       <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Learn how to perform proper executions of fitness exercises with our incredible database set of more than 100+ exercises guides</p>
     </div>
-    <div class="flex flex-col">
-            <div v-for='(kkk, index) in faq' :key='index'  class="grid grid-cols-2 lg:grid-cols-4 lg:px-8">
+    <div>
+            <div v-for='(kkk, index) in faq' :key='index'  class="grid grid-cols-2 lg:grid-cols-5 lg:px-8">
               <CardDialog v-for='(item, index) in kkk.items' :key='index' :data='item'/>
             </div>
     </div>

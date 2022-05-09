@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="h-full w-full">
     <button
       type="button"
       @click="openModal"
