@@ -75,7 +75,7 @@ const faq = [
                 heading: 'Lunge',
                 open: false,
                 image_url: 'https://cdn.shopify.com/s/files/1/0269/5551/3900/files/Lunge_600x600.png?v=1612138903',
-                starting_position_desc:'SStanding with legs hip-width apart, one dumbbell in each hand.',
+                starting_position_desc:'Standing with legs hip-width apart, one dumbbell in each hand.',
                 execution_desc:'Keeping the bust straight, take a step forward and slowly descend until the forward thigh is parallel to the ground. Take care that your knee does not exceed the axis of your toes. Then return to the original position. Once you have completed your series, do the same with the other leg.',
                 During_the_whole_movement:'',
                 During_the_whole_movement_desc1:'',
