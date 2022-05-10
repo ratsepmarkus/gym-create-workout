@@ -4,48 +4,19 @@
     <div v-if="errorMsg" class="mb-10 p-4 rounded-md bg-light-grey shadow-lg">
       <p class="text-red-500">{{ errorMsg }}</p>
     </div>
-
     <!-- Login -->
-    <form
-      @submit.prevent="login"
-      class="p-8 flex flex-col bg-gray-800 rounded-md shadow-lg"
-    >
+    <form @submit.prevent="login" class="p-8 flex flex-col bg-gray-800 rounded-md shadow-lg">
       <h1 class="text-3xl text-indigo-500 font-bold mb-4">Login</h1>
-
       <div class="flex flex-col mb-2">
         <label for="email" class="mb-1 text-sm text-white">Email</label>
-        <input
-          type="text"
-          required
-          class="p-2 text-gray-500 focus:outline-none"
-          id="email"
-          v-model="email"
-        />
+        <input type="text" required class="p-2 text-gray-500 focus:outline-none" id="email" v-model="email"/>
       </div>
-
       <div class="flex flex-col mb-2">
         <label for="password" class="mb-1 text-sm text-white">Password</label>
-        <input
-          type="password"
-          required
-          class="p-2 text-gray-500 focus:outline-none"
-          id="password"
-          v-model="password"
-        />
+        <input type="password" required class="p-2 text-gray-500 focus:outline-none" id="password" v-model="password"/>
       </div>
-
-      <button
-        type="submit"
-        class="mt-6 py-2 px-6 rounded-sm self-start text-sm
-      text-white bg-indigo-500 duration-200 border-solid
-      border-2 border-transparent hover:bg-indigo-600"
-      >
-        Login
-      </button>
-
-      <router-link class="text-sm mt-6 text-center text-white" :to="{ name: 'Register' }">
-        Don't have an account? <span class="text-indigo-500">Register</span>
-      </router-link>
+      <button type="submit" class="mt-6 py-2 px-6 rounded-sm self-start text-sm text-white bg-indigo-500 duration-200 border-solid border-2 border-transparent hover:bg-indigo-600">Login</button>
+      <router-link class="text-sm mt-6 text-center text-white" :to="{ name: 'Register' }">Don't have an account? <span class="text-indigo-500">Register</span></router-link>
     </form>
   </div>
   <Faq />

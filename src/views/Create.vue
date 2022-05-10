@@ -1,70 +1,35 @@
 <template>
   <div class="bg-gradient-to-b from-gray-800 to-gray-600 bg-gradient-to-r md:px-60 md:py-20 px-4 py-10">
     <!-- Status Message -->
-    <div
-      v-if="statusMsg || errorMsg"
-      class="mb-10 p-4 bg-gray-200 rounded-md shadow-lg"
-    >
-      <p class="text-indigo-500 font-bold">
-        {{ statusMsg }}
-      </p>
+    <div v-if="statusMsg || errorMsg" class="mb-10 p-4 bg-gray-200 rounded-md shadow-lg">
+      <p class="text-indigo-500 font-bold">{{ statusMsg }}</p>
       <p class="text-red-500">{{ errorMsg }}</p>
     </div>
-
     <!-- Create -->
     <div class="p-8 flex items-start bg-gray-900 rounded-md shadow-lg">
       <!-- Form -->
       <form @submit.prevent="createWorkout" class="flex flex-col gap-y-5 w-full">
         <h1 class="text-2xl font-bold text-indigo-500">Create Workout</h1>
-
         <!-- Workout Name -->
         <div class="flex flex-col">
-          <label for="workout-name" class="mb-1 text-sm text-white"
-            >Workout Name</label
-          >
-          <input
-            type="text"
-            required
-            class="p-2 text-gray-500 focus:outline-none"
-            id="workout-name"
-            v-model="workoutName"
-          />
+          <label for="workout-name" class="mb-1 text-sm text-white">Workout Name</label>
+          <input type="text" required class="p-2 text-gray-500 focus:outline-none" id="workout-name" v-model="workoutName"/>
         </div>
-
         <!-- Workout Type -->
         <div class="flex flex-col">
-          <label for="workout-type" class="mb-1 text-sm text-white"
-            >Workout Type</label
-          >
-          <select
-            id="workout-type"
-            class="p-2 text-gray-500 focus:outline-none"
-            required
-            @change="workoutChange"
-            v-model="workoutType"
-          >
+          <label for="workout-type" class="mb-1 text-sm text-white">Workout Type</label>
+          <select id="workout-type" class="p-2 text-gray-500 focus:outline-none" required @change="workoutChange" v-model="workoutType">
             <option value="select-workout">Select Workout</option>
             <option value="strength">Strength Training</option>
             <option value="cardio">Cardio</option>
           </select>
         </div>
-
         <!-- Strength Training Inputs -->
         <div v-if="workoutType === 'strength'" class="flex flex-col gap-y-4">
-          <div
-            class="flex gap-x-4 gap-y-2 relative"
-            v-for="(item, index) in exercises"
-            :key="index"
-          >
+          <div class="flex gap-x-4 gap-y-2 relative" v-for="(item, index) in exercises" :key="index">
             <div class="flex flex-col md:w-1/3">
-              <label for="exercise-name" class="mb-1 text-sm text-indigo-500"
-                >Exercise
-              </label>
-              <select
-                id="strenght-type"
-                class="p-2 w-full text-gray-500 focus:outline-none"
-                v-model="item.exercise"
-              >
+              <label for="exercise-name" class="mb-1 text-sm text-indigo-500">Exercise</label>
+              <select id="strenght-type" class="p-2 w-full text-gray-500 focus:outline-none" v-model="item.exercise">
                 <option value="">Select Type</option>
                 <option value="Barbell Bench Press">Barbell Bench Press</option>
                 <option value="Incline Dumbbell Bench Press">Incline Dumbbell Bench Press</option>
@@ -181,127 +146,51 @@
                 <option value="Seated Calf Raise">Seated Calf Raise</option>
                 <option value="Standing Calf Raise">Standing Calf Raise</option>
               </select>
-              
             </div>
             <div class="flex flex-col flex-1">
               <label for="sets" class="mb-1 text-sm text-indigo-500">Sets </label>
-              <input
-                type="text"
-                class="p-2 w-full text-gray-500 focus:outline-none"
-                v-model="item.sets"
-              />
+              <input type="text" class="p-2 w-full text-gray-500 focus:outline-none" v-model="item.sets"/>
             </div>
             <div class="flex flex-col flex-1">
               <label for="reps" class="mb-1 text-sm text-indigo-500">Reps </label>
-              <input
-                type="text"
-                class="p-2 w-full text-gray-500 focus:outline-none"
-                v-model="item.reps"
-              />
+              <input type="text" class="p-2 w-full text-gray-500 focus:outline-none" v-model="item.reps"/>
             </div>
             <div class="flex flex-col flex-1">
-              <label for="weight" class="mb-1 text-sm text-indigo-500"
-                >Weight
-              </label>
-              <input
-                type="text"
-                class="p-2 w-full text-gray-500 focus:outline-none"
-                v-model="item.weight"
-              />
+              <label for="weight" class="mb-1 text-sm text-indigo-500">Weight</label>
+              <input type="text" class="p-2 w-full text-gray-500 focus:outline-none" v-model="item.weight"/>
             </div>
-            <img
-              @click="deleteExercise(item.id)"
-              src="@/assets/images/trash-light.png"
-              class="h-4 w-auto absolute -left-5 cursor-pointer"
-              alt=""
-            />
+            <img @click="deleteExercise(item.id)" src="@/assets/images/trash-light.png" class="h-4 w-auto absolute -left-5 cursor-pointer" alt=""/>
           </div>
-          <button
-            @click="addExercise"
-            type="button"
-            class="mt-6 py-2 px-6 rounded-sm self-start text-sm
-      text-white bg-indigo-500 duration-200 border-solid
-      border-2 border-transparent hover:bg-indigo-600"
-          >
-            Add Exercise
-          </button>
+          <button @click="addExercise" type="button" class="mt-6 py-2 px-6 rounded-sm self-start text-sm text-white bg-indigo-500 duration-200 border-solid border-2 border-transparent hover:bg-indigo-600">Add Exercise</button>
         </div>
-
         <!-- Cardio Inputs -->
         <div v-if="workoutType === 'cardio'" class="flex flex-col gap-y-4">
-          <div
-            class="flex gap-x-4 gap-y-2 relative md:flex-row"
-            v-for="(item, index) in exercises"
-            :key="index"
-          >
+          <div class="flex gap-x-4 gap-y-2 relative md:flex-row" v-for="(item, index) in exercises" :key="index">
             <div class="flex flex-col md:w-1/3">
-              <label for="cardio-type" class="mb-1 text-sm text-indigo-500"
-                >Type
-              </label>
-              <select
-                id="cardio-type"
-                class="p-2 w-full text-gray-500 focus:outline-none"
-                v-model="item.cardioType"
-              >
+              <label for="cardio-type" class="mb-1 text-sm text-indigo-500">Type</label>
+              <select id="cardio-type" class="p-2 w-full text-gray-500 focus:outline-none" v-model="item.cardioType">
                 <option value="">Select Type</option>
                 <option value="Run">Runs</option>
                 <option value="Walk">Walk</option>
               </select>
             </div>
             <div class="flex flex-col flex-1">
-              <label for="distance" class="mb-1 text-sm text-indigo-500"
-                >Distance
-              </label>
-              <input
-                type="text"
-                class="p-2 w-full text-gray-500 focus:outline-none"
-                v-model="item.distance"
-              />
+              <label for="distance" class="mb-1 text-sm text-indigo-500">Distance</label>
+              <input type="text" class="p-2 w-full text-gray-500 focus:outline-none" v-model="item.distance"/>
             </div>
             <div class="flex flex-col flex-1">
-              <label for="duration" class="mb-1 text-sm text-indigo-500"
-                >Duration
-              </label>
-              <input
-                type="text"
-                class="p-2 w-full text-gray-500 focus:outline-none"
-                v-model="item.duration"
-              />
+              <label for="duration" class="mb-1 text-sm text-indigo-500">Duration</label>
+              <input type="text" class="p-2 w-full text-gray-500 focus:outline-none" v-model="item.duration"/>
             </div>
             <div class="flex flex-col flex-1">
               <label for="pace" class="mb-1 text-sm text-indigo-500">Pace </label>
-              <input
-                type="text"
-                class="p-2 w-full text-gray-500 focus:outline-none"
-                v-model="item.pace"
-              />
+              <input type="text" class="p-2 w-full text-gray-500 focus:outline-none" v-model="item.pace"/>
             </div>
-            <img
-              @click="deleteExercise(item.id)"
-              src="@/assets/images/trash-light.png"
-              class="h-4 w-auto absolute -left-5 cursor-pointer"
-              alt=""
-            />
+            <img @click="deleteExercise(item.id)" src="@/assets/images/trash-light.png" class="h-4 w-auto absolute -left-5 cursor-pointer" alt=""/>
           </div>
-          <button
-            @click="addExercise"
-            type="button"
-            class="mt-6 py-2 px-6 rounded-sm self-start text-sm
-      text-white bg-indigo-500 duration-200 border-solid
-      border-2 border-transparent hover:bg-indigo-600"
-          >
-            Add Exercise
-          </button>
+          <button @click="addExercise" type="button" class="mt-6 py-2 px-6 rounded-sm self-start text-sm text-white bg-indigo-500 duration-200 border-solid border-2 border-transparent hover:bg-indigo-600">Add Exercise</button>
         </div>
-
-        <button
-          type="submit"
-          class="mt-6 py-2 px-6 rounded-sm self-start text-sm
-      text-white bg-indigo-500 duration-200 border-solid
-      border-2 border-transparent hover:bg-indigo-600"
-        >
-          Create Workout
-        </button>
+        <button type="submit" class="mt-6 py-2 px-6 rounded-sm self-start text-sm text-white bg-indigo-500 duration-200 border-solid border-2 border-transparent hover:bg-indigo-600">Create Workout</button>
       </form>
     </div>
   </div>
