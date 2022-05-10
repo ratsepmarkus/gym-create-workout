@@ -8,6 +8,9 @@
       </div>
       <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Learn how to perform proper executions of fitness exercises with our incredible database set of more than 100+ exercises guides</p>
     </div>
+
+      <!-- Cards style, popup, pictures, description for exercises  -->
+
     <div>
       <div v-for='(kkk, index) in faq' :key='index'  class="grid grid-cols-2 lg:grid-cols-5 lg:px-8">
         <CardDialog v-for='(item, index) in kkk.items' :key='index' :data='item'/>
@@ -15,8 +18,8 @@
     </div>
   </div>
 </section>
-
 </template>
+
 <script setup>
 import CardDialog from '../components/CardDialog.vue';
 import Cards from '../components/Cards.vue';
