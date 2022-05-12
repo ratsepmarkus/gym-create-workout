@@ -1,3 +1,6 @@
+# web-based gym app "Flippin'Gym" 
+
+
 ## Project setup
 ```
 npm install
