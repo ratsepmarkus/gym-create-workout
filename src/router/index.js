@@ -5,7 +5,6 @@ import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Create from "../views/Create.vue";
 import ViewWorkout from "../views/ViewWorkout.vue";
-
 import Chest from '../views/Chest.vue'
 import Back from '../views/Back.vue'
 import Shoulders from '../views/Shoulders.vue'

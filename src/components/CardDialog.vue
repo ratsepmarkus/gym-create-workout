@@ -90,7 +90,6 @@ const props = defineProps({
         default:null
     }
 })
-console.log(props.data)
 const isOpen = ref(false)
 
 function closeModal() {
